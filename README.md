@@ -22,3 +22,13 @@ Once we have this Image we need to detect the edges which are defined as rapid c
 
 ![Image3]
 
+As we can see on the Image we didn't only detect the edges for the lines but we have the edges of many other objects in the surroundings, we need to filter our image through a Mask to remove all the items that we dont need from it. Due to the nature of the Image, the position and perspective, a trapezoidal mask was used for this purpose.
+
+![Image4] ![Image5]
+
+With only the edges of the lanelines expl weosed, we can simplify these edges into multiple continuous lines that we can characterize using the Houghs Transform. Not everyline in the image is useful would need to implement a set of assumptions to discard the lines that don't met our criteria:
+-There is a minimum length for the lines we can consider useful.
+-The edges Image is made out of discrete dots in the cartesian space with sometimes gaps in between the point that consitute an straight line. we need to an allowance for these gaps in the Houghs transform.
+-The lines slope is a powerfull way to determine what lines belong to what side of the road and which lines need to be discarted.
+
+![Image6]
