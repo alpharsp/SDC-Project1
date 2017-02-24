@@ -61,5 +61,5 @@ This initial project is obviously based on very ideal conditions on a highway, t
 
 
 ###3) Possible Improvements
--This algorithm is very static, it only uses the information from one line at a time, which is fine in the event that we have ideal consitions. However in the event of a shortcoming such as the ones mentioned above, it would be very benefitial to use control theory to set the angle and positions of the boundaries using the Proportional Integrative and Derivative properties of the detected input lines. In other words to consider the past position/orientation of the boundaries, the present input of the road image and to predict the future position/orientation.
+-This algorithm is very static, it only uses the information from one image at a time, which is fine in the event that we have ideal consitions. However in the event of a shortcoming such as the ones mentioned above, it would be very benefitial to use control theory to set the angle and positions of the boundaries using the Proportional Integrative and Derivative properties of the detected input lines. In other words to consider the past position/orientation of the boundaries, the present input of the road image and to predict the future position/orientation.
 
