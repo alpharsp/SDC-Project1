@@ -27,7 +27,7 @@ As we can see on the Image we didn't only detect the edges for the lines but we 
 ![Image4] 
 ![Image5]
 
-With only the edges of the lanelines expl weosed, we can simplify these edges into multiple continuous lines that we can characterize using the Houghs Transform. Not everyline in the image is useful, we need to stablish a set of assumptions to discard the lines that don't met our criteria:
+With only the edges of the lane lines exposed, we can simplify these edges into multiple continuous lines that we can characterize using the Houghs Transform. Not everyline in the image is useful, we need to stablish a set of assumptions to discard the lines that don't met our criteria:
 
 -There is a minimum length for the lines we can consider useful.
 
