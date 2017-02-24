@@ -26,9 +26,16 @@ As we can see on the Image we didn't only detect the edges for the lines but we 
 
 ![Image4] ![Image5]
 
-With only the edges of the lanelines expl weosed, we can simplify these edges into multiple continuous lines that we can characterize using the Houghs Transform. Not everyline in the image is useful would need to implement a set of assumptions to discard the lines that don't met our criteria:
+With only the edges of the lanelines expl weosed, we can simplify these edges into multiple continuous lines that we can characterize using the Houghs Transform. Not everyline in the image is useful, we need to stablish a set of assumptions to discard the lines that don't met our criteria:
+
 -There is a minimum length for the lines we can consider useful.
+
 -The edges Image is made out of discrete dots in the cartesian space with sometimes gaps in between the point that consitute an straight line. we need to an allowance for these gaps in the Houghs transform.
+
 -The lines slope is a powerfull way to determine what lines belong to what side of the road and which lines need to be discarted.
 
 ![Image6]
+
+Finally, we can trace single lines on each side of the road described as the weighted average of the Gradient and Bias of every single smaller line; where the weight factor is the length of the lines. Using these methods we allow the longer lines detected to have more influence than the small ones in the final product.
+
+![Image7]
