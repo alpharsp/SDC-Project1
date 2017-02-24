@@ -31,7 +31,7 @@ With only the edges of the lane lines exposed, we can simplify these edges into 
 
 -There is a minimum length for the lines we can consider useful.
 
--The edges Image is made out of discrete dots in the cartesian space with sometimes gaps in between the point that consitute an straight line. we need to an allowance for these gaps in the Houghs transform.
+-The edges Image is made out of discrete dots in the cartesian space with sometimes gaps in between the points that consitute a straight line. we need to stablish an allowance for these gaps in the Houghs transform.
 
 -The lines slope is a powerfull way to determine what lines belong to what side of the road and which lines need to be discarted.
 
