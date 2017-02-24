@@ -24,7 +24,8 @@ Once we have this Image we need to detect the edges which are defined as rapid c
 
 As we can see on the Image we didn't only detect the edges for the lines but we have the edges of many other objects in the surroundings, we need to filter our image through a Mask to remove all the items that we dont need from it. Due to the nature of the Image, the position and perspective, a trapezoidal mask was used for this purpose.
 
-![Image4] ![Image5]
+![Image4] 
+![Image5]
 
 With only the edges of the lanelines expl weosed, we can simplify these edges into multiple continuous lines that we can characterize using the Houghs Transform. Not everyline in the image is useful, we need to stablish a set of assumptions to discard the lines that don't met our criteria:
 
@@ -39,3 +40,26 @@ With only the edges of the lanelines expl weosed, we can simplify these edges in
 Finally, we can trace single lines on each side of the road described as the weighted average of the Gradient and Bias of every single smaller line; where the weight factor is the length of the lines. Using these methods we allow the longer lines detected to have more influence than the small ones in the final product.
 
 ![Image7]
+
+###2) Possible Shortcomings
+
+This initial project is obviously based on very ideal conditions on a highway, the following conditions would become a threat at the time of setting the lane boundaries:
+
+-Sharp turns
+
+-Blury old lines
+
+-Overlapping of oldlines and new lines
+
+-Objects or paint in the road within our line color parameters
+
+-Other Vehicle interfeering with the image capture
+
+-Large gaps in between dotted lines
+
+-Absence of lines in a highway
+
+
+###3) Possible Improvements
+-This algorithm is very static, it only uses the information from one line at a time, which is fine in the event that we have ideal consitions. However in the event of a shortcoming such as the ones mentioned above, it would be very benefitial to use control theory to set the angle and positions of the boundaries using the Proportional Integrative and Derivative properties of the detected input lines. In other words to consider the past position/orientation of the boundaries, the present input of the road image and to predict the future position/orientation.
+
